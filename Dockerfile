@@ -11,6 +11,9 @@ RUN yum -y install epel-release
 RUN yum install -y nodejs
 RUN yum install -y npm
 
+# Set npm strict ssl to false
+RUN npm config set strict-ssl false
+
 # Copy app to /src
 COPY . /src
 
